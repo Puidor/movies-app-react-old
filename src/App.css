@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body,
+input,
+button {
+  font-family: Roboto, sans-serif;
+}
+
+.App {
+  min-height: 100vh;
+  text-align: center;
+  padding: 0;
+}
+
+/* *************************HEADER************************* */
+
+header {
+  width: 100%;
+  background: #100e17;
+
+  position: absolute;
+  top: 0;
+}
+
+header .title {
+  color: white;
+  text-shadow: 3px 3px rgba(221, 209, 209, 0.2);
+  font-size: 45px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+/* -----------INPUT+BTN----------- */
+
+.buscar-bar {
+  width: 50%;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.buscar-btn,
+.topMovies-btn {
+  background: rgb(156, 56, 56);
+  border: 1px solid rgb(156, 56, 56);
+  margin-left: 10px;
+  font-size: 20px;
+  padding: 10px 20px;
+  color: rgb(216, 194, 194);
+}
+
+.topMovies-btn {
+  margin-bottom: 20px;
+  background: rgb(66, 66, 107);
+  border: 1px solid rgb(66, 66, 107);
+  color: white;
+}
+
+.buscar-btn:hover,
+.topMovies-btn:hover {
+  background: rgb(156, 56, 56);
+  border: 1px solid rgb(243, 226, 226);
+  cursor: pointer;
+  color: white;
+}
+
+/* *************************MAIN-MOVIES************************* */
+
+.all-movies {
+  margin-top: 250px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+/* -----------Cada um dos filmes----------- */
+.wrap-movie {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  margin: 20px auto;
+
+  color: black;
+  background-color: white;
+}
+
+.wrap-movie-1 img {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.wrap-movie-2 {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  padding: 40px 20px 40px 20px;
+  margin-left: 20px;
+}
+
+/* -----------TITULO + NOTA----------- */
+
+.title-nota {
+  display: grid;
+  grid-template-columns: 1.8fr 0.2fr;
+  align-items: center;
+}
+
+/* -----------NOTA DO FILME----------- */
+
+.title-nota h2 {
+  margin: 10px;
+  font-style: normal;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: left;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  color: #515869;
+
+  text-align: center;
+  padding-top: 20px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+/* -----------NOME DO FILME----------- */
+
+.title-nota h1 {
+  margin: 10px;
+  font-style: normal;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: left;
+  color: #515869;
+}
+
+/* -----------SINOPSE DO FILME----------- */
+
+.wrap-movie h3 {
+  margin: 10px;
+  font-style: normal;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  color: #515869;
+  margin-top: 20px;
+}
+
+.wrap-movie p {
+  font-size: 15px;
+  color: #4c4c4c;
+  text-align: left;
+  margin: 9px;
+}
+
+@media (max-width: 1200px) {
+  .all-movies {
+    grid-template-columns: 1fr;
+  }
+  .wrap-movie {
+    width: 90vw;
+    padding: 0px;
+  }
+}
